@@ -6,7 +6,7 @@ class Monster {
             friction:1,
 
         }
-        this.image = loadImage("sprites/Monster-01.png")
+        this.image = loadImage("images/Monster-01.png")
         this.body = Bodies.rectangle(x, y, width, height, options)
         this.Visiblity = 255;
         this.width = width

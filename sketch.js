@@ -6,7 +6,7 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
 //IF,ELSE
-bg ="sprites/Monster-02.png"
+//bg ="images/Monster-02.png"
 //Ground
 var land
 
@@ -17,24 +17,21 @@ var superMan
 var box1,box2,box3,box4,box5,box6,box7,box8,box9
 var boxes1, boxes2, boxes3, boxes4, boxes5, boxes6, boxes7, boxes8, boxes9
 var bo1, bo2, bo3, bo4
-var string
+var rope
 var monsters
 var EI
 
 
 
 function preload() {
-  backgroundImage = loadImage("sprites/GamingBackground.png")
-  EI = loadImage("sprites/Monster-02.png")
+  backgroundImage = loadImage("images/GamingBackground.png")
+  EI = loadImage("images/Monster-02.png")
 }
 
 function setup() {
   createCanvas(1535, 720)
   engine = Engine.create();
   world = engine.world;
-
-
-
 
 
 
@@ -61,11 +58,9 @@ function setup() {
   bo2 = new Box(910, -400, 50, 50)
   bo3 = new Box(910, -400, 50, 50)
   bo4 = new Box(910, -400, 50, 50)
-  superMan= new Man(370,60,270,70)
-  string= new Rope(superMan.body,{x:400,y:20})
+  superMan= new Ball(370,60,270,70)
+  rope= new Rope(superMan.body,{x:400,y:20})
   monsters= new Monster(948,0,2,350)
-  
-
   
 
 }
@@ -102,11 +97,9 @@ boxes1.display();
   bo3.display();
   bo4.display();
   superMan.display();
-  string.display()
+ rope.display()
   monsters.display();
 
-  
- 
 }
 
 
